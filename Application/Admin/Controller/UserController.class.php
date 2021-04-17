@@ -23,6 +23,7 @@ class UserController extends AdminBaseController
         $this->addTemplet = 'User/add';
         $this->editTemplet = 'User/edit';
         $this->indexTemplet = 'User/index';
+        $this->order = 'id desc';
         $this->whereList = ['name' => 'eq','phone' => 'eq'];
     }
 }

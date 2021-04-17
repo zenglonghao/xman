@@ -40,6 +40,7 @@ trait MakeController
     private $addTemplet = '';
     private $editTemplet = '';
     private $indexTemplet = '';
+    private $order = '';
     private $whereList = [];
     public function index()
     {
@@ -65,10 +66,22 @@ trait MakeController
                 }
             }
 
-            $list = M($this->table)
+            
+            if($this->order)
+            {
+                $list = M($this->table)
+                ->where($where)
+                ->limit(($page - 1) * $limit, $limit)
+                ->order($this->order)
+                ->select();
+            }else
+            {
+                $list = M($this->table)
                 ->where($where)
                 ->limit(($page - 1) * $limit, $limit)
                 ->select();
+            }
+            
             $count = M($this->table)->where($where)->count();
             $res = array(
                 'code' => 0

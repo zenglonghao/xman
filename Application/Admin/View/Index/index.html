@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>X-Man 管理后台</title>
+    <title>管理后台</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/Public/static/layui/css/layui.css" media="all"/>
     <link rel="stylesheet" href="/Public/static/css/jquery.toast.min.css" media="all"/>
     <link rel="stylesheet" href="/Public/static/css/index.css" media="all"/>
-    <!--<link rel="stylesheet" href="//at.alicdn.com/t/font_495240_oxbe4zwl9tem6lxr.css" media="all"/>-->
     <link rel="stylesheet" href="//at.alicdn.com/t/font_798193_ew7wixsziw8.css" media="all"/>
     <link rel="stylesheet" href="/Public/static/js/nprogress/nprogress.css" media="all"/>
     <script type="text/javascript" src="/Public/static/js/nprogress/nprogress.js"></script>
