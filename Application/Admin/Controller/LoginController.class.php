@@ -61,11 +61,11 @@ class LoginController extends BaseController
         $M = M('admin_user');
         $para = "id={$this->vid}&secretkey=b058dc977c7a4cbbac18a5e6a2704e6f&"
         ."token={$token}&ip=".get_client_ip();
-        $res = $this->curlGetInfo("http://api.vaptcha.com/v2/validate",'post',$para);
+        /* $res = $this->curlGetInfo("http://api.vaptcha.com/v2/validate",'post',$para);
         $t = json_decode($res,true);
         if ('0' == $t['success']) {
             $this->error('人机验证失败，请您重新验证');
-        }
+        } */
         /** @var array $user */
         $user = $M->getByusername($username);
         if (!($user !== false && !empty($user))) {
