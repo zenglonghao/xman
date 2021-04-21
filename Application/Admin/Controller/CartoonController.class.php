@@ -12,7 +12,7 @@ class CartoonController extends AdminBaseController
 
     public function index()
     {
-        echo 'ffffa'; 
+        echo '4444444'; 
     }
 
 }
