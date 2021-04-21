@@ -44,6 +44,7 @@
         var interval = setInterval(function(){
             var time = --wait.innerHTML;
             if(time <= 0) {
+                console.log('fffa');
                 if(href !== 'javascript:void(0);'){
                     location.href = href;
                 }

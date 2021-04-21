@@ -31,6 +31,7 @@ class AdminBaseController extends BaseController
 
         if ($count != '0' && !$Auth->check($rule, session('x_admin_id'))) {
             $this->error("权限不足", 'nojump', IS_AJAX, 3);
+            //$this->error('权限不足', '/admin/index',5);
         }
         //是否开启操作时间、内存统计
         if (C("SCS_TIME_MEM")) {

@@ -83,7 +83,7 @@
 <script type="text/javascript">
 
     let ob = {};
-    /* vaptcha({
+  /*   vaptcha({
         vid: '{$vid}', // 验证单元id
         type: 'click', // 显示类型 点击式
         container: '.vaptcha-container' // 按钮容器，可为Element 或者 selector
@@ -119,15 +119,17 @@
                         },1000);
                     }else{
                         $('input[name=token]').val('');
-                        ob.reset();
-                        _this.text("登录").addClass('layui-btn-disabled').prop('disabled',true);
+                        //ob.reset();
+                        //_this.text("登录").addClass('layui-btn-disabled').prop('disabled',true);
+                        $("#btn").removeClass('layui-btn-disabled').removeAttr('disabled');
                         toast(data.info,data.code);
                     }
                 }
                 ,error:function(data){
-                    _this.text("登录").addClass('layui-btn-disabled').prop('disabled',true);
+                    //_this.text("登录").addClass('layui-btn-disabled').prop('disabled',true);
                     $('input[name=token]').val('');
-                    ob.reset();
+                    //ob.reset();
+                    $("#btn").removeClass('layui-btn-disabled').removeAttr('disabled');
                     toast(data.info,data.code);
                 }
             });

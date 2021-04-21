@@ -45,6 +45,7 @@ class IndexController extends AdminBaseController
             if (in_array($v['rule_id'], $rules)) {
                 $men1[] = $v;
                 $childlist = $M->field('a.*,r.name as href')->join(C('DB_PREFIX') . "auth_rule as r on r.id=a.rule_id", 'left')->where(['a.pid' => $v['id']])->select();
+               // echo $M->_sql();die();
                 foreach ($childlist as $k1 => $v1) {
 
                     if (in_array($v1['rule_id'], $rules)) {
@@ -53,6 +54,8 @@ class IndexController extends AdminBaseController
                 }
             }
         }
+
+        
 
         $list = array();
         foreach ($men1 as $k => $v) {
@@ -223,6 +226,9 @@ class IndexController extends AdminBaseController
     {
         $Auth = new Auth();
         $data = $Auth->getGroups($id);
+       /*  echo '<pre>';
+        print_R($data);
+        echo '</pre>';die(); */
         $rules = [];//当前用户所有的规则
         foreach ($data as $v) {
             $rules = array_merge($rules, explode(',', $v['rules']));
